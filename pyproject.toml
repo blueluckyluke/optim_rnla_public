@@ -1,0 +1,40 @@
+# [build-system]
+# requires = ["hatchling"]
+# build-backend = "hatchling.build"
+
+[project]
+name = "optim_environ"
+version = "0.1"
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
+select = ["I001"]
+exclude = [".git", "**/__pycache__"]
+
+[tool.interrogate]
+exclude = ["stuff"]
+
+[tool.poetry]
+name = "optim-rnla"
+version = "0.1.0"
+description = ""
+authors = [" "]
+readme = "README.md"
+packages = [{include = "optim_rnla"}]
+
+[tool.poetry.dependencies]
+python = "^3.10, <3.13"
+numpy = "^1.25.0"
+scipy = "^1.11.1"
+matplotlib = "^3.7.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
